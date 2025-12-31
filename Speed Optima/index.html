@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedOptima - WordPress Performance Plugin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                SpeedOptima
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="../documentation.html" class="btn-outline">Documentation</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">WordPress Performance Plugin</span>
+                <h1>Make Your Website <span class="gradient-text">Lightning Fast</span></h1>
+                <p>SpeedOptima is a lightweight, powerful performance plugin that optimizes JavaScript, CSS, images, and
+                    more to dramatically improve your Core Web Vitals.</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">View Demo</a>
+                    <a href="#features" class="btn btn-secondary">Explore Features</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">90+</span>
+                        <span class="stat-label">PageSpeed Score</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">50%</span>
+                        <span class="stat-label">Faster Load</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">10k+</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="metric-card">
+                            <span class="metric-icon">🚀</span>
+                            <div class="metric-info">
+                                <span class="metric-label">Performance</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 95%"></div>
+                                </div>
+                                <span class="metric-value">95/100</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-icon">📱</span>
+                            <div class="metric-info">
+                                <span class="metric-label">Mobile Score</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 92%"></div>
+                                </div>
+                                <span class="metric-value">92/100</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-icon">⏱️</span>
+                            <div class="metric-info">
+                                <span class="metric-label">LCP</span>
+                                <div class="progress-bar green">
+                                    <div class="progress" style="width: 88%"></div>
+                                </div>
+                                <span class="metric-value">1.2s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Features</span>
+                <h2>Everything You Need for Speed</h2>
+                <p>Comprehensive optimization tools to boost your WordPress performance</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">📜</div>
+                    <h3>JavaScript Optimization</h3>
+                    <p>Defer, delay, and minify JavaScript files. Control execution timing for better Core Web Vitals.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Defer JavaScript</li>
+                        <li>Delay until interaction</li>
+                        <li>Minification</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🎨</div>
+                    <h3>CSS Optimization</h3>
+                    <p>Remove unused CSS and minify stylesheets for dramatically smaller file sizes.</p>
+                    <ul class="feature-list">
+                        <li>Unused CSS removal</li>
+                        <li>CSS minification</li>
+                        <li>Critical CSS inline</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Lazy Loading</h3>
+                    <p>Defer loading of images, iframes, and videos until they enter the viewport.</p>
+                    <ul class="feature-list">
+                        <li>Images & iframes</li>
+                        <li>Background images</li>
+                        <li>Custom elements</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🔤</div>
+                    <h3>Font Optimization</h3>
+                    <p>Host Google Fonts locally for improved privacy and faster loading.</p>
+                    <ul class="feature-list">
+                        <li>Local Google Fonts</li>
+                        <li>Font-display swap</li>
+                        <li>Preload fonts</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">🌐</div>
+                    <h3>CDN Integration</h3>
+                    <p>Easily rewrite URLs to serve static assets from your CDN provider.</p>
+                    <ul class="feature-list">
+                        <li>URL rewriting</li>
+                        <li>Directory filtering</li>
+                        <li>Exclusion support</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">🗄️</div>
+                    <h3>Database Cleanup</h3>
+                    <p>Optimize your database by removing revisions, drafts, and expired transients.</p>
+                    <ul class="feature-list">
+                        <li>Post revisions</li>
+                        <li>Transient cleanup</li>
+                        <li>Scheduled optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Live Demo</span>
+                <h2>See SpeedOptima in Action</h2>
+                <p>Interactive preview of the plugin settings panel</p>
+            </div>
+
+            <div class="demo-container">
+                <div class="demo-sidebar">
+                    <div class="demo-logo">⚡ SpeedOptima</div>
+                    <nav class="demo-nav">
+                        <a href="#" class="demo-nav-item active" data-tab="general">
+                            <span class="nav-icon">⚙️</span> General
+                        </a>
+                        <a href="#" class="demo-nav-item" data-tab="javascript">
+                            <span class="nav-icon">📜</span> JavaScript
+                        </a>
+                        <a href="#" class="demo-nav-item" data-tab="css">
+                            <span class="nav-icon">🎨</span> CSS
+                        </a>
+                        <a href="#" class="demo-nav-item" data-tab="lazyload">
+                            <span class="nav-icon">🖼️</span> Lazy Loading
+                        </a>
+                        <a href="#" class="demo-nav-item" data-tab="fonts">
+                            <span class="nav-icon">🔤</span> Fonts
+                        </a>
+                        <a href="#" class="demo-nav-item" data-tab="cdn">
+                            <span class="nav-icon">🌐</span> CDN
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="demo-content">
+                    <!-- General Tab -->
+                    <div class="demo-tab active" id="tab-general">
+                        <h3>Core Settings</h3>
+                        <div class="settings-group">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Disable Emojis</label>
+                                    <span class="setting-desc">Remove WordPress emoji scripts</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Disable Embeds</label>
+                                    <span class="setting-desc">Remove WordPress embed scripts</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Remove jQuery Migrate</label>
+                                    <span class="setting-desc">Remove deprecated jQuery helper</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Disable XML-RPC</label>
+                                    <span class="setting-desc">Improve security by disabling XML-RPC</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript Tab -->
+                    <div class="demo-tab" id="tab-javascript">
+                        <h3>JavaScript Optimization</h3>
+                        <div class="settings-group">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Defer JavaScript</label>
+                                    <span class="setting-desc">Add defer attribute to scripts</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Delay JavaScript</label>
+                                    <span class="setting-desc">Delay until user interaction</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Minify JavaScript</label>
+                                    <span class="setting-desc">Compress JS files</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="setting-textarea">
+                            <label>Excluded Scripts</label>
+                            <textarea placeholder="jquery.min.js&#10;analytics.js">jquery.min.js</textarea>
+                        </div>
+                    </div>
+
+                    <!-- CSS Tab -->
+                    <div class="demo-tab" id="tab-css">
+                        <h3>CSS Optimization</h3>
+                        <div class="settings-group">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Remove Unused CSS</label>
+                                    <span class="setting-desc">Extract only used styles</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Minify CSS</label>
+                                    <span class="setting-desc">Compress CSS files</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="setting-textarea">
+                            <label>Safelist Selectors</label>
+                            <textarea placeholder=".slick-*&#10;.modal">.slick-*</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Lazy Loading Tab -->
+                    <div class="demo-tab" id="tab-lazyload">
+                        <h3>Lazy Loading</h3>
+                        <div class="settings-group">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Lazy Load Images</label>
+                                    <span class="setting-desc">Defer offscreen images</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Lazy Load iFrames</label>
+                                    <span class="setting-desc">Defer embedded content</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Add Missing Dimensions</label>
+                                    <span class="setting-desc">Prevent layout shift</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fonts Tab -->
+                    <div class="demo-tab" id="tab-fonts">
+                        <h3>Font Optimization</h3>
+                        <div class="settings-group">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Local Google Fonts</label>
+                                    <span class="setting-desc">Host fonts locally</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Display Swap</label>
+                                    <span class="setting-desc">Add font-display: swap</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CDN Tab -->
+                    <div class="demo-tab" id="tab-cdn">
+                        <h3>CDN Integration</h3>
+                        <div class="settings-group">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Enable CDN Rewrite</label>
+                                    <span class="setting-desc">Rewrite URLs to CDN</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="setting-input">
+                            <label>CDN URL</label>
+                            <input type="text" placeholder="https://cdn.example.com">
+                        </div>
+                        <div class="setting-input">
+                            <label>Included Directories</label>
+                            <input type="text" value="wp-content,wp-includes">
+                        </div>
+                    </div>
+
+                    <div class="demo-actions">
+                        <button class="btn btn-primary" id="save-demo">💾 Save Changes</button>
+                        <span class="save-message" id="save-message"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing</span>
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your needs</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Personal</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">29</span>
+                        </div>
+                        <span class="billing">One-time payment</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 1 Site License</li>
+                        <li>✓ All Features</li>
+                        <li>✓ 1 Year Updates</li>
+                        <li>✓ Basic Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Get Started</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Business</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">79</span>
+                        </div>
+                        <span class="billing">One-time payment</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 5 Site Licenses</li>
+                        <li>✓ All Features</li>
+                        <li>✓ Lifetime Updates</li>
+                        <li>✓ Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Agency</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">199</span>
+                        </div>
+                        <span class="billing">One-time payment</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited Sites</li>
+                        <li>✓ All Features</li>
+                        <li>✓ Lifetime Updates</li>
+                        <li>✓ Premium Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">⚡ SpeedOptima</a>
+                    <p>The ultimate WordPress performance optimization plugin.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="../documentation.html">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SpeedOptima. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
