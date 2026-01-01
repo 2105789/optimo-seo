@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Writo AI Scraper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Documentation Specific Styles */
+        .doc-layout {
+            display: flex;
+            padding-top: 80px;
+        }
+
+        .doc-sidebar {
+            width: 280px;
+            position: sticky;
+            top: 80px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            padding: 30px 20px;
+            border-right: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .doc-sidebar h4 {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .doc-sidebar h4:first-child {
+            margin-top: 0;
+        }
+
+        .doc-sidebar ul {
+            list-style: none;
+        }
+
+        .doc-sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .doc-sidebar a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .doc-sidebar a:hover,
+        .doc-sidebar a.active {
+            color: var(--primary);
+        }
+
+        .doc-content {
+            flex: 1;
+            padding: 40px 60px;
+            max-width: 900px;
+        }
+
+        .doc-content h1 {
+            margin-bottom: 20px;
+        }
+
+        .doc-content h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .doc-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .doc-content p {
+            margin-bottom: 15px;
+        }
+
+        .doc-content ul,
+        .doc-content ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .doc-content li {
+            margin-bottom: 8px;
+        }
+
+        .doc-content code {
+            background: var(--bg-card);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--secondary);
+        }
+
+        .doc-content pre {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .callout {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+
+        .callout.warning {
+            background: rgba(249, 115, 22, 0.1);
+            border-left-color: var(--secondary);
+        }
+
+        .callout p {
+            margin: 0;
+        }
+
+        @media (max-width: 992px) {
+            .doc-sidebar {
+                display: none;
+            }
+
+            .doc-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✍️</span> Writo AI
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="#" class="btn btn-outline">Documentation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="doc-layout">
+        <aside class="doc-sidebar">
+            <h4>Getting Started</h4>
+            <ul>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#requirements">Requirements</a></li>
+            </ul>
+            <h4>Configuration</h4>
+            <ul>
+                <li><a href="#api-key">API Key Setup</a></li>
+                <li><a href="#models">Gemini Models</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#sources">Source URLs</a></li>
+                <li><a href="#scraping">Scraping Options</a></li>
+                <li><a href="#automation">Automation</a></li>
+            </ul>
+            <h4>Advanced</h4>
+            <ul>
+                <li><a href="#keywords">Topic Keywords</a></li>
+                <li><a href="#uninstall">Uninstallation</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ul>
+        </aside>
+
+        <main class="doc-content">
+            <h1>Writo AI Scraper <span class="gradient-text">Documentation</span></h1>
+            <p class="lead">A complete guide to setting up and configuring the Writo AI Scraper WordPress plugin.</p>
+
+            <h2 id="installation">Installation</h2>
+            <ol>
+                <li>Download the <code>writo-ai-scraper.zip</code> file.</li>
+                <li>Log in to your WordPress Admin Dashboard.</li>
+                <li>Navigate to <strong>Plugins → Add New → Upload Plugin</strong>.</li>
+                <li>Upload the zip file and click <strong>Install Now</strong>.</li>
+                <li>Once installed, click <strong>Activate</strong>.</li>
+                <li>Go to the new <strong>Writo AI</strong> menu item in your admin sidebar.</li>
+            </ol>
+
+            <h2 id="requirements">Requirements</h2>
+            <ul>
+                <li>WordPress 6.0 or higher</li>
+                <li>PHP 7.4 or higher</li>
+                <li>A valid Google Gemini API Key</li>
+                <li>Outbound HTTP connections allowed on your server</li>
+            </ul>
+
+            <h2 id="api-key">API Key Setup</h2>
+            <p>You need a Google Gemini API key from Google AI Studio.</p>
+            <ol>
+                <li>Go to <a href="https://aistudio.google.com/apikey" target="_blank">Google AI Studio</a>.</li>
+                <li>Sign in with your Google account.</li>
+                <li>Click <strong>Create API Key</strong>.</li>
+                <li>Copy the key and paste it into the <strong>Gemini API Key</strong> field in the plugin settings.
+                </li>
+                <li>Click <strong>Test API</strong> to verify the connection.</li>
+            </ol>
+            <div class="callout">
+                <p><strong>Tip:</strong> Free tier API keys have usage limits. For heavy usage, consider a paid plan.
+                </p>
+            </div>
+
+            <h2 id="models">Gemini Models</h2>
+            <p>The plugin supports multiple Gemini models:</p>
+            <ul>
+                <li><code>gemini-3-pro-preview</code> - Most intelligent, best for complex rewriting.</li>
+                <li><code>gemini-3-flash-preview</code> - Fast and capable.</li>
+                <li><code>gemini-2.5-pro</code> - Stable, reliable performance.</li>
+                <li><code>gemini-flash-latest</code> - Optimized for speed.</li>
+                <li><code>gemini-flash-lite-latest</code> - Fastest, lowest cost.</li>
+            </ul>
+
+            <h2 id="categories">Categories</h2>
+            <p>In the <strong>Allowed Categories</strong> section, select which WordPress categories the AI can assign
+                to generated posts. The AI will analyze the content and choose the most relevant categories from your
+                selection.</p>
+            <div class="callout warning">
+                <p><strong>Note:</strong> If you don't select any categories, posts will default to "Uncategorized".</p>
+            </div>
+
+            <h2 id="sources">Source URLs</h2>
+            <p>Enter the website URLs you want to scrape. Add one URL per line in the <strong>Source URLs</strong>
+                textarea.</p>
+            <pre><code>https://news.example.com/
+https://blog.anothersite.org/tech/</code></pre>
+            <p>These can be homepages (for hub mode) or direct article URLs.</p>
+
+            <h2 id="scraping">Scraping Options</h2>
+            <h3>Scrape Depth</h3>
+            <ul>
+                <li><strong>1 (URL Only):</strong> Scrapes only the exact URL provided.</li>
+                <li><strong>2 (Hub Mode):</strong> Finds article links on the source page and scrapes those linked
+                    articles.</li>
+            </ul>
+            <h3>Max Posts Per Source</h3>
+            <p>Limits how many articles are generated from <em>each</em> source URL per run. Useful for balancing
+                content from multiple sources.</p>
+            <h3>Global Posts Limit</h3>
+            <p>A safety cap on the <em>total</em> number of posts created across all sources in a single run.</p>
+            <h3>Images</h3>
+            <p>When enabled, the plugin extracts images (including OG:Image and lazy-loaded images) and sets the first
+                valid one as the Featured Image.</p>
+
+            <h2 id="automation">Automation</h2>
+            <p>Schedule automatic runs using WP-Cron:</p>
+            <ul>
+                <li><strong>Hourly</strong></li>
+                <li><strong>Twice Daily</strong></li>
+                <li><strong>Daily</strong></li>
+                <li><strong>Weekly</strong></li>
+            </ul>
+            <p>Use the <strong>Write Now</strong> button to trigger an immediate manual run.</p>
+
+            <h2 id="keywords">Topic Keywords (Optional)</h2>
+            <p>Filter content by keywords. Enter comma-separated keywords (e.g.,
+                <code>bitcoin, crypto, blockchain</code>). Only articles containing at least one of these keywords in
+                their title or content will be processed.</p>
+
+            <h2 id="uninstall">Uninstallation</h2>
+            <p>The plugin provides a clean uninstall option:</p>
+            <ol>
+                <li>In the settings, check <strong>"Delete all plugin settings and data upon uninstallation"</strong>.
+                </li>
+                <li>Deactivate the plugin.</li>
+                <li>Delete the plugin via the WordPress Plugins page.</li>
+            </ol>
+            <p>All plugin options will be removed from the database. Generated posts are <em>not</em> deleted, as they
+                belong to you.</p>
+
+            <h2 id="troubleshooting">Troubleshooting</h2>
+            <h3>Posts Not Being Generated</h3>
+            <ul>
+                <li>Verify your API key is correct.</li>
+                <li>Check if the source website blocks bots (some sites return empty content).</li>
+                <li>If using Keywords, ensure the scraped content actually contains those keywords.</li>
+                <li>Enable <code>WP_DEBUG_LOG</code> in <code>wp-config.php</code> and check
+                    <code>wp-content/debug.log</code> for detailed error messages from the plugin.</li>
+            </ul>
+            <h3>Duplicate Posts</h3>
+            <p>The plugin stores the source URL as post meta (<code>writo_source_link</code>) and checks for duplicates
+                before creating new posts. If you see duplicates, ensure the previous post wasn't deleted from the
+                database incorrectly.</p>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
